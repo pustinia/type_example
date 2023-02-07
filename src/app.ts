@@ -14,7 +14,7 @@ type objectPlayer = {
 };
 
 function greet(person: objectPlayer) {
-    return "Hello " + person.name;
+    return "Hello there !! " + person.name;
   }
 
-console.log(`test sample typescript`);
+console.log(`test sample typescript, nodemon`);

@@ -1,4 +1,4 @@
-### manage node.js & npm version with nvm
+### Manage node.js & npm version with nvm
 - [nvm-windows](https://github.com/coreybutler/nvm-windows)
 ```
 $ nvm version
@@ -23,20 +23,17 @@ $ nvm install lts
 $ node --version
 v16.14.2
 
+# update npm
+$ npm install -g npm@9.4.1 
+
 ```
 
-### typescript initial start
+### Typescript initialize
 ```
 tsc --init
 ```
-### package.json script change
-```
-"build": "tsc",
-"dev": "nodemon --exec ts-node src/checkmq.ts",
-"start": "node build/checkmq.js",
-"test": "jest"
-```
-### add npm modules about ts
+
+### Install typescript modules using npm
 ```
 npm install @types/node --save-dev
 npm install nodemon --save-dev
@@ -44,20 +41,37 @@ npm install -g ts-node
 npm i jest @types/jest ts-jest typescript -D
 npm i jest @types/jest ts-jest --save-dev
 ```
-### run npm modules
+
+### Change package.json script
+```
+"build": "tsc",
+"dev": "nodemon --exec ts-node src/app.ts",
+"start": "node build/app.js",
+"test": "jest"
+```
+
+### Run npm modules
 ```
   npm run build  // transcript node.js
   npm run dev    // run with daemon
+  npm run start   // run as production
 ```
-### run with jest
+### Run with jest
 ```
-    npm i jest @types/jest ts-jest typescript -D
-    jest.config.js create
-    add npm run script in package.json file
+    [1] npm i jest @types/jest ts-jest typescript -D
+    [2] jest.config.js create
+    [3] add npm run script in package.json file
     {
     "test": "jest"
     }
 ```
-- npm t
-// save 하는 경우마다 테스트 하기
-- npm t -- --watchAll
+- test all cases  
+  > $ npm t  
+- testing each save action  
+  > $ npm t -- --watchAll
+
+### Run docker image
+docker run -d --name test-typescript some-typescript:1.0.0-RC1
+
+### build docker image
+var -> run build.sh -> Dockerfile

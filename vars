@@ -1,0 +1,11 @@
+#
+# This file contains a number of global variables used
+# by the docker container and its scripts. update any
+# of these to be appropriate for your environment.
+#
+
+IMAGE_TAG="1.0.0-RC1"
+IMAGE_NAME="some-typescript:${IMAGE_TAG}"
+
+# test port for build
+TEST_PORT=8081
