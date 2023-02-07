@@ -75,3 +75,22 @@ docker run -d --name test-typescript some-typescript:1.0.0-RC1
 
 ### build docker image
 var -> run build.sh -> Dockerfile
+
+### git bucket error
+```
+$ git branch -a
+  develop
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/develop
+  remotes/origin/main
+
+# remove 'remotes/origin/HEAD' branch
+$ git remote set-head origin -d
+
+$ git branch -a
+  develop
+* main
+  remotes/origin/develop
+  remotes/origin/main
+```
