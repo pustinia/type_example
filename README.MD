@@ -1,3 +1,30 @@
+### manage node.js & npm version with nvm
+- [nvm-windows](https://github.com/coreybutler/nvm-windows)
+```
+$ nvm version
+1.1.9
+
+$ nvm install NEW_VERSION --reinstall-packages-from=OLD_VERSION
+nvm install 6.7 --reinstall-packages-from=6.4
+
+$ nvm ls
+ * 16.14.2 (Currently using 64-bit executable)
+    8.17.0
+
+# node.js version select
+$ nvm use v8.17.0
+
+# change node.js root path
+$ nvm root /d/vscode_workspace/node.js_versions/
+
+# install node.js with lts version
+$ nvm install lts
+
+$ node --version
+v16.14.2
+
+```
+
 ### typescript initial start
 ```
 tsc --init
